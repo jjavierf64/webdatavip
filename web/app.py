@@ -39,4 +39,4 @@ def about():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host= '192.168.0.106', port=80 ,debug=True)

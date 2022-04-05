@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div style="margin: auto; width: 50em; padding: 5em;">
+        <h1> n e u r o n a . o n e  </h1>
+    </div>
+    <div style="margin: auto; width: 35em; height: 35em;">
+        <img src="{{ url_for('static', filename='neurona.png') }}" style="width:35em; height: 35em">
+    </div>
+        {% for post in posts %}
+        <article class="media content-section">
+            <div class="media-body">
+              <div class="article-metadata">
+                <a class="mr-2" href="#">{{ post.author }}</a>
+                <small class="text-muted">{{ post.date_posted }}</small>
+              </div>
+              <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+              <p class="article-content">{{ post.content }}</p>
+            </div>
+          </article>
+        {% endfor %}
+{% endblock content %}
